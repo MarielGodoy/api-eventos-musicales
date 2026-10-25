@@ -1,75 +1,20 @@
-# React + TypeScript + Vite
+# 🎵 Gestor de Eventos Musicales (Frontend MERN)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web desarrollada en React y TypeScript que funciona como interfaz de usuario (frontend) para un sistema de gestión de eventos musicales, conectándose a una API REST desarrollada en Node.js, Express y MongoDB.
 
-Currently, two official plugins are available:
+## 🚀 Características principales
+* **Arquitectura Limpia:** Separación por capas con servicios centralizados (`services/`) utilizando `axios` y tipado estricto (`types/`)[cite: 8].
+* **Navegación Fluida:** Implementación de `react-router-dom` para una experiencia de páginas múltiples sin recargas[cite: 8, 9].
+* **ABM Completo (CRUD):** 
+  * **Alta:** Formulario de creación de eventos validado con Formik y Yup[cite: 9].
+  * **Lectura:** Visualización en tiempo real del listado de eventos con barra de búsqueda y gestión de estados (carga, datos y error)[cite: 9].
+  * **Modificación:** Edición interactiva de los datos del evento[cite: 9].
+  * **Baja:** Eliminación de registros protegida mediante un modal de confirmación[cite: 9].
+* **Endpoints de Negocio:** Integración de acciones avanzadas de la API, como el registro de participantes y control de entradas disponibles[cite: 9].
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Cómo correr el proyecto en local
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+1. Clonar el repositorio.
+2. Instalar las dependencias ejecutando en la terminal:
+   ```bash
+   npm install
